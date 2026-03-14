@@ -1,0 +1,58 @@
+================================================================
+  AutoFlow — Instrucoes de instalacao e uso
+================================================================
+
+----------------------------------------------------------------
+OPCAO 1 — Rodar pelo executavel compilado (mais simples)
+----------------------------------------------------------------
+
+1. Abra a pasta "dist\"
+2. Execute "AutoFlow.exe"
+
+Nao e necessario instalar Python nem nenhuma dependencia.
+Tudo ja esta embutido no executavel.
+
+Crie a seguinte estrutura de pastas ao lado do AutoFlow.exe
+antes de rodar pela primeira vez (o app cria automaticamente
+se tiver permissao de escrita):
+
+  AutoFlow.exe
+  workflows\          <- seus workflows ficam salvos aqui
+  assets\
+    templates\        <- imagens de referencia para wait_image
+    screenshots\      <- screenshots gerados pelo app
+
+
+----------------------------------------------------------------
+OPCAO 2 — Rodar pelo codigo-fonte (requer Python)
+----------------------------------------------------------------
+
+Requisitos:
+  - Python 3.11 ou 3.12  (https://www.python.org/downloads/)
+    Marque "Add Python to PATH" durante a instalacao
+
+Instalar dependencias (rode no terminal dentro desta pasta):
+
+  pip install customtkinter pystray Pillow pyautogui opencv-python pyperclip keyboard mouse pyinstaller
+
+Executar o app:
+
+  python main.py
+
+
+----------------------------------------------------------------
+Observacoes
+----------------------------------------------------------------
+
+- Ao fechar a janela, o AutoFlow minimiza para a bandeja do
+  sistema (systray). Clique com o botao direito no icone para
+  sair completamente.
+
+- Hotkeys globais funcionam mesmo com a janela minimizada.
+
+- Em caso de erro "Windows protegeu seu computador" ao abrir
+  o .exe: clique em "Mais informacoes" e depois "Executar assim
+  mesmo". Isso acontece porque o executavel nao tem certificado
+  digital pago — o app e seguro.
+
+================================================================
