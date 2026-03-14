@@ -33,7 +33,19 @@ Requisitos:
 
 Instalar dependencias (rode no terminal dentro desta pasta):
 
-  pip install customtkinter pystray Pillow pyautogui opencv-python pyperclip keyboard mouse pyinstaller
+  pip install customtkinter pystray Pillow pyautogui opencv-python pyperclip keyboard mouse pyinstaller selenium webdriver-manager pytesseract
+
+Para o step "click_text" e "wait_text" (OCR de tela):
+  1. Baixe o Tesseract OCR (executavel separado do pip):
+     https://github.com/UB-Mannheim/tesseract/wiki
+  2. Instale normalmente (next > next > finish)
+  3. O AutoFlow detecta automaticamente — nao requer configuracao adicional
+  Sem o Tesseract instalado, os steps click_text e wait_text darao erro ao executar.
+
+Para automacao de browser (steps browser_*):
+  - O AutoFlow usa Selenium com Selenium Manager
+  - Chrome ou Edge deve estar instalado no computador
+  - O ChromeDriver e baixado automaticamente na primeira execucao (requer internet)
 
 Executar o app:
 

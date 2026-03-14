@@ -63,8 +63,8 @@ if (Get-Command "python" -ErrorAction SilentlyContinue) {
 Write-Host "📥 Baixando os arquivos do Auto Flow..." -ForegroundColor Cyan
 $repoZip = "$env:TEMP\AutoFlow-main.zip"
 
-# ATENÇÃO: Usuário precisa alterar SEU_USUARIO para o nome de usuário dele no GitHub, caso contrário falhará!
-$repoUrl = "https://github.com/SEU_USUARIO/AutoFlow/archive/refs/heads/main.zip"
+# O repositório oficial do Auto Flow no GitHub
+$repoUrl = "https://github.com/iagoiagodev/Auto-Flow/archive/refs/heads/main.zip"
 
 try {
     Write-Host "Fazendo o download do repositório..." -ForegroundColor Yellow
@@ -83,8 +83,8 @@ try {
     Remove-Item $extractedFolder -Recurse -Force
     Write-Host "✅ Arquivos do projeto instalados com sucesso na pasta!" -ForegroundColor Green
 } catch {
-    Write-Host "⚠️ Não foi possível baixar diretamente do repositório 'SEU_USUARIO/AutoFlow'." -ForegroundColor Red
-    Write-Host "Certifique-se de que publicou o repositório como PÚBLICO e substituiu 'SEU_USUARIO' no script." -ForegroundColor Yellow
+    Write-Host "⚠️ Não foi possível baixar diretamente do repositório 'iagoiagodev/Auto-Flow'." -ForegroundColor Red
+    Write-Host "Certifique-se de ter acesso à internet ou que o link está correto." -ForegroundColor Yellow
     Write-Host "Detalhe do erro: $_ " -ForegroundColor Red
     # Não cancelamos a instalação aqui pois o usuário pode usar o script localmente copiando os arquivos se desejar.
 }

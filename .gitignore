@@ -35,6 +35,12 @@ venv.bak/
 *.zip
 *.msi
 
+# PyInstaller
+AutoFlow.spec
+
+# Claude Code (configurações locais do agente — nunca subir)
+.claude/
+
 # Editor / IDE
 .vscode/
 .idea/
@@ -44,10 +50,25 @@ venv.bak/
 # Configs / Logs locais do Auto Flow
 history.json
 settings.json
+
+# Logs (pasta sobe via .gitkeep, conteúdo fica local)
+logs/*
+!logs/.gitkeep
+
+# Workflows: backups gerados automaticamente (podem conter dados de clientes)
+workflows/.bkp/
+
+# Workflows editáveis (sobe apenas o .gitkeep como placeholder)
 workflows/*
 !workflows/.gitkeep
+
+# Screenshots — podem conter CNPJ, dados de clientes, resultados de consultas
 assets/screenshots/*
 !assets/screenshots/.gitkeep
+
+# Templates de imagem (gerados/baixados localmente)
+assets/templates/*
+!assets/templates/.gitkeep
 
 # Mac OS
 .DS_Store
